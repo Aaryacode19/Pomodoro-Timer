@@ -15,7 +15,6 @@ timer = None  # A variable to store the timer
 
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
-    """Resets the timer and UI elements to their initial state."""
     global timer  # Use the global keyword to access the timer variable
     if timer is not None:  # If the timer is running
         window.after_cancel(timer)  # Cancel the timer
@@ -28,7 +27,6 @@ def reset_timer():
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    """Starts the timer and alternates between work and break periods."""
     global reps  # Use the global keyword to access the reps variable
     reps += 1  # Increment the repetitions counter
     work_sec = WORK_MIN * 60  # Convert work duration from minutes to seconds
@@ -47,7 +45,6 @@ def start_timer():
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
-    """Counts down the time and updates the timer display."""
     global timer  # Use the global keyword to access the timer variable
     count_min = math.floor(count / 60)  # Calculate the number of minutes left
     count_sec = count % 60  # Calculate the number of seconds left
